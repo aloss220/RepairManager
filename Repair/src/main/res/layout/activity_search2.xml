@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F4F4"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:id="@+id/relativelayout1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/theme" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:onClick="onClick"
+            android:padding="15dp"
+            android:src="@mipmap/left_arrow" />
+
+        <RelativeLayout
+            android:id="@+id/relativelayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toLeftOf="@+id/btn_search"
+            android:layout_toRightOf="@+id/iv_back"
+            android:background="@drawable/edittext_bg3" >
+
+            <ImageView
+                android:id="@+id/iv_search"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:onClick="onClick"
+                android:src="@mipmap/search_gray" />
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/iv_delete"
+                android:layout_toRightOf="@+id/iv_search"
+                android:background="@null"
+                android:hint="搜索相关产品"
+                android:padding="10dp"
+                android:textColor="@color/text_color_g"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/iv_delete"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:padding="10dp"
+                android:onClick="onClick"
+                android:visibility="gone"
+                android:src="@mipmap/delete" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_search"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:text="搜索"
+            android:onClick="onClick"
+            android:textColor="#FFFFFF" />
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#Ffffff"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/radio1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/rb_bg_selector"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="销量领先"
+            android:textColor="@drawable/rb_text_selector"
+            android:textSize="@dimen/common_text_size14" />
+
+        <RadioButton
+            android:id="@+id/radio2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/rb_bg_selector"
+            android:button="@null"
+            android:drawableRight="@mipmap/down_arrow"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:text="价格"
+            android:textColor="@drawable/rb_text_selector"
+            android:textSize="@dimen/common_text_size14" />
+    </RadioGroup>
+
+    
+    <TextView
+        android:id="@+id/tv_tips"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="暂无相关商品"
+        android:visibility="gone"
+         />
+    <com.jumeng.repairmanager.listview.PullToRefreshLayout
+        android:id="@+id/refresh_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="10dp" >
+
+        <include layout="@layout/refresh_head" />
+
+        <com.jumeng.repairmanager.listview.PullableGridView
+            android:id="@+id/gridView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:horizontalSpacing="7dp"
+            android:numColumns="2"
+            android:verticalSpacing="7dp" >
+        </com.jumeng.repairmanager.listview.PullableGridView>
+
+        <include
+            android:id="@+id/loadmore_view"
+            layout="@layout/load_more" />
+    </com.jumeng.repairmanager.listview.PullToRefreshLayout>
+
+</LinearLayout>

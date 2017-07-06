@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F9F9F9"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_order_time"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_gravity="center_vertical"
+        android:background="@color/background_w"
+        android:gravity="left|center_vertical"
+        android:text=""
+        android:paddingLeft="15dp"
+        android:textColor="#999999"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:background="#FAFAFA"
+        android:paddingBottom="5dp"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/moren_fang" >
+        </ImageView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp">
+                <TextView
+                    android:id="@+id/tv_item"
+                    android:layout_width="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center_vertical"
+                    android:lines="1"
+                    android:maxLength="20"
+                    android:textStyle="bold"
+                    android:layout_marginTop="3dp"
+                    android:text=""
+                    android:textColor="#4C4C4C"
+                    android:textSize="14sp" />
+
+                <com.jumeng.repairmanager.view.StarBarView
+                    android:id="@+id/starbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    app:space_width="2dp"
+                    app:star_height="15dp"
+                    app:star_hollow="@mipmap/star_normal"
+                    app:star_isIndicator="true"
+                    app:star_max="5"
+                    android:layout_alignParentRight="true"
+                    app:star_orientation="horizontal"
+                    app:star_rating="0"
+                    app:star_solid="@mipmap/star_selected"
+                    app:star_width="15dp"
+                    ></com.jumeng.repairmanager.view.StarBarView>
+
+                <TextView
+                    android:id="@+id/tv_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=""
+                    android:paddingRight="5dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="#FF6D00"
+                    android:textSize="12sp" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical|left"
+                android:maxLines="1"
+                android:paddingRight="20dp"
+                android:ellipsize="end"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:text=""
+                android:textColor="#999999"
+                android:textSize="12sp" />
+            <TextView
+                android:id="@+id/tv_server_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:text=""
+                android:layout_centerVertical="true"
+                android:textColor="@color/orange2"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

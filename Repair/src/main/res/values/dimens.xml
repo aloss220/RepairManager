@@ -1,0 +1,43 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+
+    <dimen name="header_height">60dp</dimen>
+    <dimen name="footer_height">90dp</dimen>
+    <dimen name="footer_padding">10dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="activity_title_bar_height">50dp</dimen>
+    <dimen name="title_height">48dp</dimen>
+    <dimen name="title_bar_title_size">18sp</dimen>
+    <dimen name="padding">5dp</dimen>
+    <dimen name="height_submit_btn">45dp</dimen>
+    <dimen name="cut_off_line">1px</dimen>
+    <dimen name="cut_off_line2">2px</dimen>
+    <dimen name="border">5dp</dimen>
+    <dimen name="border_5">5dp</dimen>
+    <dimen name="border_10">10dp</dimen>
+    <dimen name="border_15">15dp</dimen>
+    <dimen name="border_20">20dp</dimen>
+    <dimen name="edit_icon_weight">15dp</dimen>
+    <dimen name="edit_icon_height">20dp</dimen>
+    <dimen name="icon_size">30dp</dimen>
+    <dimen name="icon_size2">10dp</dimen>
+    <dimen name="icon_size3">20dp</dimen>
+    <dimen name="icon_size4">15dp</dimen>
+    <dimen name="edit_height">45dp</dimen>
+    <dimen name="item_height">45dp</dimen>
+    <dimen name="main_img_size">40dp</dimen>
+    <dimen name="main_ll_size">65dp</dimen>
+    <dimen name="dg_rb_size">45dp</dimen>
+    <dimen name="relativelayout_height">45dp</dimen>
+    <dimen name="icon_size_sliding_menu2">13dp</dimen>
+    <dimen name="personal_item_height">45dp</dimen>
+    <dimen name="common_text_size18">18sp</dimen>
+    <dimen name="common_text_size16">16sp</dimen>
+    <dimen name="common_text_size14">14sp</dimen>
+    <dimen name="common_text_size12">12sp</dimen>
+    <dimen name="common_text_size10">10sp</dimen>
+    <dimen name="photo_size">80dp</dimen>
+
+</resources>

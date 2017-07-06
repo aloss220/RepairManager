@@ -1,0 +1,120 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/include1"
+        layout="@layout/layout_title_bar" />
+    
+   
+
+    <com.jumeng.repairmanager.listview.PullToRefreshLayout
+        android:id="@+id/refresh_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll"
+        android:layout_below="@+id/include1" >
+
+        <include layout="@layout/refresh_head" />
+        <com.jumeng.repairmanager.listview.PullableListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/background"
+            android:dividerHeight="1dp" />
+
+        <include layout="@layout/load_more" />
+    </com.jumeng.repairmanager.listview.PullToRefreshLayout>
+    
+
+     <LinearLayout 
+        android:id="@+id/ll_tips"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+         android:layout_above="@+id/ll"
+         android:orientation="vertical"
+        android:layout_below="@+id/include1"
+        android:visibility="gone"
+        >
+         <TextView
+        android:id="@+id/tv_tips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="200dp"
+        android:gravity="center"
+        android:text="购物车暂无商品"
+         />
+         <Button
+            android:id="@+id/btn_go_shop"
+            android:layout_width="110dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/textview_bg"
+            android:onClick="onClick"
+            android:text="去商城添加商品"
+            android:textColor="@color/theme"
+            android:textSize="14sp" />
+        
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/ll_bg"
+        android:orientation="horizontal" >
+
+        <CheckBox
+            android:id="@+id/cb_select"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.2"
+            android:paddingLeft="10dp"
+            android:onClick="onClick"
+            android:button="@drawable/checkbox_bg2"
+            android:text="全选"
+            android:textColor="@color/text_color_g" />
+
+        <TextView
+            android:id="@+id/tv_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.5"
+            android:text="合计：￥0.0"
+            android:textColor="@color/theme"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btn_order"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.3"
+            android:background="@color/theme"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="结算(0)"
+            android:textColor="@color/text_color_w" />
+        <Button
+            android:id="@+id/btn_delete"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.3"
+            android:background="@color/theme"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="删 除"
+            android:visibility="gone"
+            android:textColor="@color/text_color_w" />
+    </LinearLayout>
+
+</RelativeLayout>

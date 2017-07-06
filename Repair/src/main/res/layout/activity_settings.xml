@@ -1,0 +1,133 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_gray"
+    android:orientation="vertical"
+    >
+
+    <include
+        android:id="@+id/include1"
+        layout="@layout/layout_title_bar" />
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="70dp"
+        android:src="@mipmap/logo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:text="@string/app_name"
+        android:textColor="@color/text_color_bk"
+        android:textSize="@dimen/common_text_size16" />
+
+    <TextView
+        android:id="@+id/tv_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="v1.0"
+        android:textColor="@color/text_color_b"
+        android:textSize="@dimen/common_text_size14" />
+
+    <RelativeLayout
+        android:id="@+id/rl_guide"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:background="@color/background_w" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="用户指导"
+            android:textColor="@color/text_color_bk"
+            android:textSize="@dimen/common_text_size14" />
+
+        <ImageView
+            android:id="@+id/imageview"
+            android:layout_width="@dimen/icon_size_sliding_menu2"
+            android:layout_height="@dimen/icon_size_sliding_menu2"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@mipmap/right_arrow_g" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_version_info"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="1dp"
+        android:visibility="gone"
+        android:background="@color/background_w" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="版本信息"
+            android:textColor="@color/text_color_bk"
+            android:textSize="@dimen/common_text_size14" />
+
+        <ImageView
+            android:id="@+id/imageview1"
+            android:layout_width="@dimen/icon_size_sliding_menu2"
+            android:layout_height="@dimen/icon_size_sliding_menu2"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@mipmap/right_arrow_g" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_version_update"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="1dp"
+        android:visibility="gone"
+        android:background="@color/background_w" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="版本更新"
+            android:textColor="@color/text_color_bk"
+            android:textSize="@dimen/common_text_size14" />
+
+        <ImageView
+            android:layout_width="@dimen/icon_size_sliding_menu2"
+            android:layout_height="@dimen/icon_size_sliding_menu2"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@mipmap/right_arrow_g" />
+    </RelativeLayout>
+
+    
+    <Button
+        android:id="@+id/btn_logoff"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_submit_btn"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/submit_bg"
+        android:onClick="onClick"
+        android:text="退出登录"
+        android:textSize="16sp"
+        android:textColor="@color/text_color_w" />
+
+</LinearLayout>

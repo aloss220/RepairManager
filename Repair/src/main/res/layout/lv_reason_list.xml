@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:background="@color/background_w"
+    >
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp"
+        android:button="@null"
+        android:drawableRight="@drawable/popwindow_radiobutton_selector"
+        android:text=""
+        android:textSize="16sp"
+        android:textColor="@drawable/popwindow_text_selector" />
+
+</RelativeLayout>

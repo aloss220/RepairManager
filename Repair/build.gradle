@@ -1,0 +1,81 @@
+apply plugin: 'com.android.application'
+
+android {
+
+    /*  运行正常 打releaseb包 报错
+       *出这个错误的原因就是导入的jar冲突，像我这里就是support-v4包冲突，lib中导入了support-v4包，
+       * app项目中导入了appcompat-v7包，因为 appcompat-v7包是包含support-v4包的，所以就冲突了。
+       * 解决方法是：导入的appcompat-v7包中将support-v4剥离就OK了，重新rebuild一下就好了。
+       * */
+    configurations {
+        all*.exclude group: 'com.android.support', module: 'support-v4'
+        all*.exclude group: 'com.android.support', module: 'support-annotations'
+        all*.exclude group: 'com.android.support', module: 'support-compat'
+    }
+
+    signingConfigs {
+        repairuser {
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+            storeFile file('E:\\newWork\\RepairManager\\repair_worker')
+            storePassword 'android'
+        }
+    }
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
+    defaultConfig {
+        applicationId "com.jumeng.repairmanager"
+        minSdkVersion 16
+        targetSdkVersion 22
+        versionCode 25
+        versionName "2.0.5"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.repairuser
+        }
+        debug {
+            signingConfig signingConfigs.repairuser
+        }
+    }
+
+    lintOptions {
+        //lint 遇到 error 时继续 构建
+        abortOnError false
+        // build release 版本 时 开启lint 检测
+        checkReleaseBuilds false
+        // 防止在发布的时候出现因MissingTranslation导致Build Failed!
+        disable 'MissingTranslation'
+    }
+}
+
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile project(':EaseUI')
+    compile files('libs/android-async-http-1.4.8.jar')
+    compile files('libs/commons-views-1.0.0.jar')
+    compile files('libs/GetuiExt-2.0.3.jar')
+    compile files('libs/GetuiSDK2.8.1.0.jar')
+    compile files('libs/json_simple-1.1.jar')
+    compile 'com.android.support:appcompat-v7:22.+'
+    testCompile 'junit:junit:4.12'
+    compile 'com.amap.api:location:3.2.0'
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    compile 'com.amap.api:map2d:2.9.3'
+    compile 'com.amap.api:search:3.6.1'
+    //七牛云sdk
+    compile 'com.qiniu:qiniu-android-sdk:7.3.3'
+    compile 'com.squareup.okhttp3:okhttp:3.2.0'
+    compile 'com.qiniu:happy-dns:0.2.7'
+
+}
+
+

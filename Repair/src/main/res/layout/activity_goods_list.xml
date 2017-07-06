@@ -1,0 +1,82 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00ffffff"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:orientation="vertical"
+        android:background="@drawable/dialog_share_shape"
+        >
+        <ListView
+            android:id="@+id/listView"
+            android:layout_above="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+            android:layout_marginTop="10dp"
+            android:divider="@color/background"
+            android:dividerHeight="1dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cut_off_line2"
+            android:background="@color/cut_off_line_color" />
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal" >
+
+
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:text="取消"
+                android:textColor="@color/gray_7f"
+                android:textSize="@dimen/common_text_size16" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="@dimen/cut_off_line2"
+                android:layout_height="match_parent"
+                android:background="@color/cut_off_line_color" />
+
+            <Button
+                android:id="@+id/btn_done"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:textColor="@color/blue"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:background="@null"
+                android:text="确定"
+                android:textSize="@dimen/common_text_size16" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

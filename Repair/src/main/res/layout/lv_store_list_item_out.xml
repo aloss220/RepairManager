@@ -1,0 +1,97 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_w"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp" >
+
+        <TextView
+            android:id="@+id/tv_order_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text=""
+            android:textColor="#FF5500"
+            android:textSize="@dimen/common_text_size14" />
+
+        <TextView
+            android:id="@+id/tv_order_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text=""
+            android:textColor="#FF5500"
+            android:textSize="@dimen/common_text_size12" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/cut_off_line"
+        android:background="@color/cut_off_line_color" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp" >
+    </ListView>
+
+    <!--
+         <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/background_g" />
+    -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_receiver"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/btn_bg"
+            android:text="确认收货"
+            android:textColor="#FFFFFFFF"
+            android:visibility="gone"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/tv_money"
+            android:singleLine="true"
+            android:text="工1件商品  合计："
+            android:textColor="@color/text_color_bk"
+            android:textSize="@dimen/common_text_size14"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/theme"
+            android:textSize="@dimen/common_text_size14" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,38 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_w"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/include1"
+        layout="@layout/layout_title_bar" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:padding="10dp"
+        android:text="2016-05-11 16:30  维修管家"
+        android:textColor="@color/text_color_g"
+        android:textSize="@dimen/common_text_size14" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/background_g" >
+    </View>
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:padding="10dp"
+        android:text="本店所有商品一律特价销售，经济实惠才是你最佳选择，划算不划算，你过来看一看，比一比，看质量比价格，货比三家不上当，真正的实惠，真正的便宜，只要您进我店来，总有一款适合你，望广大顾客走过路过千万不要路过！！！"
+        android:textColor="@color/text_color_g3"
+        android:textSize="@dimen/common_text_size14" />
+
+</LinearLayout>

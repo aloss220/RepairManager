@@ -1,0 +1,20 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <CheckBox
+        android:id="@+id/cb_lable"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text=""
+        android:button="@null"
+        android:background="@drawable/cb_bg_selector"
+        android:textColor="@drawable/text_color_selector2"
+        android:textSize="@dimen/common_text_size16" />
+
+</LinearLayout>

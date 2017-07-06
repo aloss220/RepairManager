@@ -1,0 +1,79 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_w"
+    android:orientation="vertical"
+    android:paddingBottom="5dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="5dp"
+    >
+
+        <RelativeLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:id="@+id/tv_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/theme"
+                android:textSize="@dimen/common_text_size14" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_toRightOf="@+id/tv_user"
+                android:layout_marginLeft="5dp"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/text_color_g"
+                android:textSize="@dimen/common_text_size12" />
+
+            <com.jumeng.repairmanager.view.StarBarView
+                android:id="@+id/starbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                app:space_width="2dp"
+                app:star_height="13dp"
+                app:star_hollow="@mipmap/star_normal"
+                app:star_isIndicator="true"
+                app:star_max="5"
+                android:layout_alignParentRight="true"
+                app:star_orientation="horizontal"
+                app:star_rating="1"
+                app:star_solid="@mipmap/star_selected"
+                app:star_width="13dp"
+                ></com.jumeng.repairmanager.view.StarBarView>
+        </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="5dp"
+        android:maxLines="3"
+        android:text=" "
+        android:textColor="@color/text_color_bk"
+        android:textSize="@dimen/common_text_size12" />
+
+    <GridView
+        android:id="@+id/gridView"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:horizontalSpacing="10dp"
+        android:numColumns="3" >
+    </GridView>
+
+
+
+</LinearLayout>

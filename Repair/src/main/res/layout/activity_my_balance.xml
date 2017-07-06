@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_gray"
+    android:orientation="vertical"
+    >
+
+    <include
+        android:id="@+id/include1"
+        layout="@layout/layout_title_bar" />
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/include1"
+        android:background="@color/background_w"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textview_yue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:text="账户余额(元)"
+            android:textStyle="bold"
+            android:textColor="@color/black_4b"
+            android:textSize="@dimen/common_text_size16" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+            <TextView
+                android:id="@+id/tv_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_alignParentBottom="true"
+                android:text=""
+                android:textStyle="bold"
+                android:textColor="@color/orange2"
+                android:textSize="35sp" />
+
+            <TextView
+                android:id="@+id/tv_order_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignBaseline="@+id/tv_balance"
+                android:layout_marginRight="15dp"
+                android:layout_alignParentRight="true"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            >
+
+            <TextView
+                android:id="@+id/tv_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:textSize="12sp"
+                android:textColor="@color/gray_9a" />
+            <TextView
+                android:id="@+id/tv_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:textSize="12sp"
+                android:visibility="gone"
+                android:textColor="@color/gray_9a" />
+
+            <TextView
+                android:id="@+id/tv_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:textSize="12sp"
+                 android:textColor="@color/gray_9a" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_tips"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@+id/ll"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:text="暂无收支记录"
+        android:visibility="gone"
+        />
+
+    <com.jumeng.repairmanager.listview.PullToRefreshLayout
+        android:id="@+id/refresh_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/background_w"
+        android:layout_above="@+id/btn_get_money"
+        android:layout_below="@+id/ll" >
+
+        <include layout="@layout/refresh_head" />
+
+        <com.jumeng.repairmanager.listview.PullableListView
+            android:id="@+id/listView_balance"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/background"
+            android:dividerHeight="1dp" />
+
+        <include layout="@layout/load_more" />
+    </com.jumeng.repairmanager.listview.PullToRefreshLayout>
+
+    <Button
+        android:id="@+id/btn_get_money"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_submit_btn"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/submit_bg"
+        android:onClick="onClick"
+        android:text="提  现"
+        android:textColor="#FFFFFFFF"
+        android:textSize="16sp" />
+
+</RelativeLayout>

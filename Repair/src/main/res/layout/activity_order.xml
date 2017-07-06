@@ -1,0 +1,60 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_gray"
+    android:orientation="vertical"
+    >
+
+    <include
+        android:id="@+id/include1"
+        layout="@layout/layout_title_bar" />
+
+    <RadioGroup
+        android:id="@+id/rg_order"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/background_w"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/rb0"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:drawableRight="@mipmap/arrow_b_d"
+            android:onClick="onClick"
+            android:gravity="center"
+            android:text="工作"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:textColor="@drawable/rb_text_selector" />
+
+        <!-- <View
+            android:layout_width="@dimen/cut_off_line"
+            android:layout_height="match_parent"
+            android:background="#59767676" /> -->
+
+        <RadioButton
+            android:id="@+id/rb1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:button="@null"
+            android:onClick="onClick"
+            android:gravity="center"
+            android:text="商城"
+            android:textColor="@drawable/rb_text_selector" />
+    </RadioGroup>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:background="@color/background_w" />
+
+</LinearLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3598DB</color>
+    <color name="colorPrimaryDark">#566E78</color>
+    <color name="colorAccent">#B753B6</color>
+
+    <color name="background_g">#F3F3F3</color> <!-- 白色 -->
+    <color name="background_g2">#F4F6F3</color> <!-- 白色 -->
+    <color name="background_g3">#373A38</color> <!-- 白色 -->
+    <color name="background_w">#ffffffff</color> <!-- 白色 -->
+    <color name="text_color_b">#1CA9DF</color> <!-- 蓝色 -->
+    <color name="text_color_bk">#333333</color> <!-- 黑色 -->
+    <color name="text_color_g4">#999999</color> <!-- 黑色 -->
+    <color name="text_color_g2">#656565</color> <!-- 蓝色 -->
+    <color name="text_color_y">#FB8614</color> <!-- 蓝色 -->
+    <color name="edit_text_border">#929292</color> <!-- 蓝色 -->
+    <color name="black">#000000</color>
+    <color name="orang">#FF5500</color>
+
+    <color name="background_gray">#EAEAEA</color>
+    <color name="black_2e"> #2E2E2E</color>
+    <color name="orange">#FF7906</color>
+    <color name="orange2">#FF6C08</color>
+    <color name="orange3">#FF6D00</color>
+    <color name="orange_submit">#FF6D00</color>
+    <color name="black_4b">#4B4B4B</color>
+    <color name="black_4c">#4C4C4C</color>
+    <color name="black_4d">#4D4D4D</color>
+    <color name="gray_7f">#7F7F7F</color>
+    <color name="gray_98">#989898</color>
+    <color name="gray_9a">#9A9A9A</color>
+    <color name="gray_cc">#cccccc</color>
+    <color name="theme">#2A2C38</color>
+    <color name="blue">#0E8EFD</color>
+    <color name="black_submit">#2A2C38</color>
+    <color name="title_bar">#FF5500</color> <!-- 蓝色 -->
+    <color name="title_bar_title">#ffffffff</color> <!-- 白色 -->
+    <color name="submit_button">#34C0D9</color> <!-- 蓝色 -->
+    <color name="text_color_w">#ffffffff</color> <!-- 白色 -->
+    <color name="text_color_g">#767676</color> <!-- 灰色 -->
+    <color name="text_color_g3">#666666</color> <!-- 灰色 -->
+    <color name="text_color_bl">#FF000000</color> <!-- 黑色 -->
+    <color name="text_color_r">#ffff0000</color> <!-- 红色 -->
+    <color name="background">#F4F4F4</color> <!-- 灰色 -->
+    <color name="cut_off_line_color">#E8E8E8</color> <!-- 灰色 -->
+    <color name="cut_off_line_color2">#BFBFBF</color> <!-- 灰色 -->
+    <color name="edittext_text">#FF000000</color> <!-- 黑色 -->
+    <color name="border_color">#ffcccccc</color> <!-- 灰色 -->
+    <color name="border_color_g">#1baadf</color> <!-- 蓝色 -->
+    <color name="border_color_g2">#1CA9DF</color> <!-- 蓝色 -->
+    <color name="province_line_border">#C7C7C7</color>
+     <color name="parking_line">#9DB5C2</color>
+    
+  
+</resources>
